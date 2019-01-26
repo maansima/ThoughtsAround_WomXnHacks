@@ -1,0 +1,47 @@
+body {
+	font-family: 'Muli', sans-serif;
+}
+
+.logo {
+	text-align: center;
+}
+
+.logo img {
+	width: 25%;
+}
+
+.post {
+	width: 600px;
+	height: 600px;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	margin-top: -300px;
+	margin-left: -300px;
+	border-style: solid;
+	border-width: 5px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.child {
+	margin: auto;
+	font-family: 'Muli', sans-serif;
+}
+
+#heading {
+	font-size: 50px;
+	align-self: flex-start;
+}
+
+#wrapper{
+	text-align: center; 
+	margin: 70px auto;
+}
+
+#output_image{
+	max-height: 400px; 
+	max-width: 400px; 
+	border:4px solid #000;
+}

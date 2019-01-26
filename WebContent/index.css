@@ -1,0 +1,44 @@
+#map {
+	height: 100%;
+}
+
+h1 {
+	text-align: center;
+}
+
+html, body {
+	height: 60%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	text-align: center;
+}
+
+.logo img {
+	width: 25%;
+}
+
+.container {
+	display: flex; 
+	width: 95%;
+	flex-wrap: wrap;
+	margin: 30px;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-evenly;
+}
+
+.item img{
+	align-self: flex-start;
+  	max-height: 400px;
+	margin: auto;
+}
+
+.item p{
+	font-family: Futura;
+	display: inline-block;
+	align-self: baseline;
+}

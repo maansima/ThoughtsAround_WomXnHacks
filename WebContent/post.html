@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="post.css" />
+</head>
+<body>
+
+<div class = "logo">
+ <img src="logo.jpg"></img>
+ </div>
+ 
+ <div class="post">
+ <div class="child">
+ 	<p id="heading">Map A Thought</p></div>
+ 	<p>Share your adventure</p>
+ 	 <div class="child">
+ 	<form id="caption">
+ 	<input type="text"> </form>
+ 	<a href="something" class="button1">submit</a>
+ 	</div>
+
+
+ <script type="text/javascript">
+ function preview_image(event){
+	 var reader = new FileReader(); 
+	 reader.onload = function(){
+		 var output = document.getElementById('output_image');
+		 output.src = reader.result;
+	 }
+	 reader.readAsDataURL(event.target.files[0]);
+	 }}
+
+ </script>
+ </div>
+ <div id="wrapper">
+ <input type="file" accept="image/*" onchange="preview_image(event)">
+ <img id="output_image"/> </div>
+ 
+</body>
+</html>
