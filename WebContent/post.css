@@ -1,3 +1,5 @@
+
+
 body {
 	font-family: 'Muli', sans-serif;
 }
@@ -11,6 +13,7 @@ body {
 }
 
 .post {
+
 	width: 600px;
 	height: 600px;
 	top: 50%;
@@ -35,13 +38,13 @@ body {
 	align-self: flex-start;
 }
 
-#wrapper{
-	text-align: center; 
-	margin: 70px auto;
+#content{
+	display: flex; 
+	align-items: row; 
 }
 
-#output_image{
-	max-height: 400px; 
-	max-width: 400px; 
-	border:4px solid #000;
-}
+ #map {
+ 	   margin-top: 700px;
+       height: 500px; 
+
+      }
