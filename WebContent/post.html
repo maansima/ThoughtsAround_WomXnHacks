@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="post.css" />
+<link href="https://fonts.googleapis.com/css?family=Muli"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="post.css" />
+
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+
+
+
 </head>
 <body>
+<input type="file" value="upload" id="fileButton"/>
+<script>
+	// Initialize Firebase
+	var config = {
+		apiKey : "AIzaSyA1MUaabLNmebZWvaZDfO-xd6tllJ67ijE",
+		authDomain : "womxnhacks-1548365178472.firebaseapp.com",
+		databaseURL : "https://womxnhacks-1548365178472.firebaseio.com",
+		projectId : "womxnhacks-1548365178472",
+		storageBucket : "womxnhacks-1548365178472.appspot.com",
+		messagingSenderId : "213602949576"
+	};
+	// Initialize the default app
+	firebase.initializeApp(config);
+	var database = firebase.database();
 
-<div class = "logo">
- <img src="logo.jpg"></img>
- </div>
- 
- <div class="post">
- <div class="child">
- 	<p id="heading">Map A Thought</p></div>
- 	<p>Share your adventure</p>
- 	 <div class="child">
- 	<form id="caption">
- 	<input type="text"> </form>
- 	<a href="something" class="button1">submit</a>
- 	</div>
+	
+	// ... or you can use the equivalent shorthand notation
+	defaultStorage = firebase.storage();
+	defaultDatabase = firebase.database();
 
+	var uploader = document.getElementById('uploader');
+	var fileButton = document.getElementById('fileButton');
+	
+	
+	fileButton.addEventListener('change', (e) => {
+		
+		var cityname = "Tokyo";
+		var file = e.target.files[0];
+		
+		var postRef = firebase.database().ref("cities/");
 
- <script type="text/javascript">
- function preview_image(event){
-	 var reader = new FileReader(); 
-	 reader.onload = function(){
-		 var output = document.getElementById('output_image');
-		 output.src = reader.result;
-	 }
-	 reader.readAsDataURL(event.target.files[0]);
-	 }}
-
+		postRef.set ({
+			   cityname: {
+			     file
+			   }
+			});
+	});
+	
+	 
  </script>
- </div>
- <div id="wrapper">
- <input type="file" accept="image/*" onchange="preview_image(event)">
- <img id="output_image"/> </div>
- 
+
+	<div class="logo">
+		<img src="logo.jpg"></img>
+	</div>
+
+	<div class="post">
+		<div class="child">
+			<p id="heading">map a thought</p>
+		</div>
+		<p>Share your adventure</p>
+		<div class="child">
+		</div>
+	</div>
+
+
 </body>
 </html>
